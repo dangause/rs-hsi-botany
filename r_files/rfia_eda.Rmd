@@ -1,0 +1,36 @@
+---
+title: "FIA Species Presence Raster for ML"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Install only if needed
+# install.packages("rFIA")
+# install.packages(c("sf", "terra", "dplyr", "ggplot2"))
+
+library(rFIA)
+library(sf)
+library(terra)
+library(dplyr)
+
+# Allow downloads that take up to 1 hour (defaults to 60 seconds)
+options(timeout=3600)
+
+# Download and load FIA data
+ca_fia <- getFIA(states = 'CA', dir = '../data/rfia/', load = TRUE)
+
+```
+
+
+```{r setup, include=FALSE}
+
+# Get plot coordinates
+plot_locations <- ca_fia$PLOT %>%
+  filter(PLT_CN %in% oak_plots$PLT_CN) %>%
+  select(PLT_CN, LAT, LON) %>%
+  distinct() %>%
+  st_as_sf(coords = c("LON", "LAT"), crs = 4326)
+
+```

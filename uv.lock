@@ -248,6 +248,25 @@ wheels = [
 ]
 
 [[package]]
+name = "contextily"
+version = "1.6.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "geopy" },
+    { name = "joblib" },
+    { name = "matplotlib" },
+    { name = "mercantile" },
+    { name = "pillow" },
+    { name = "rasterio" },
+    { name = "requests" },
+    { name = "xyzservices" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/85/5c/67e809b32a8e4017a2dbfea90d4401167b087fc0cab88e82c7abc4da91d6/contextily-1.6.2.tar.gz", hash = "sha256:3c747925269be248a9b1a761859e05d1681286e04d5d0796bdaf1de3409474bb", size = 22461478, upload-time = "2024-09-03T09:14:46.47Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fb/46/07a029b73f9a5c7bbf9b538e6441c42014a448f335a1cc780616f2594bad/contextily-1.6.2-py3-none-any.whl", hash = "sha256:b06ead7258b34e73db2e318e33554f54a22d207b3c272b74d8b64801773b3fc3", size = 17149, upload-time = "2024-09-03T09:14:43.582Z" },
+]
+
+[[package]]
 name = "contourpy"
 version = "1.3.2"
 source = { registry = "https://pypi.org/simple" }
@@ -489,6 +508,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/06/f9/a9a9496c8dc558c4c16a0c53283501fe3098b26536d5f475d378c8ed3437/gdal-3.10.3.tar.gz", hash = "sha256:b5550650daeeae8e41091581d9aea7d75a9f15b0ebbeb8c96e37458fa02264cd", size = 838170, upload-time = "2025-04-07T09:57:20.729Z" }
 
 [[package]]
+name = "geographiclib"
+version = "2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/96/cd/90271fd195d79a9c2af0ca21632b297a6cc3e852e0413a2e4519e67be213/geographiclib-2.0.tar.gz", hash = "sha256:f7f41c85dc3e1c2d3d935ec86660dc3b2c848c83e17f9a9e51ba9d5146a15859", size = 36720, upload-time = "2022-04-23T13:01:11.495Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9f/5a/a26132406f1f40cf51ea349a5f11b0a46cec02a2031ff82e391c2537247a/geographiclib-2.0-py3-none-any.whl", hash = "sha256:6b7225248e45ff7edcee32becc4e0a1504c606ac5ee163a5656d482e0cd38734", size = 40324, upload-time = "2022-04-23T13:01:09.958Z" },
+]
+
+[[package]]
 name = "geopandas"
 version = "1.0.1"
 source = { registry = "https://pypi.org/simple" }
@@ -503,6 +531,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/39/08/2cf5d85356e45b10b8d066cf4c3ba1e9e3185423c48104eed87e8afd0455/geopandas-1.0.1.tar.gz", hash = "sha256:b8bf70a5534588205b7a56646e2082fb1de9a03599651b3d80c99ea4c2ca08ab", size = 317736, upload-time = "2024-07-02T12:26:52.928Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c4/64/7d344cfcef5efddf9cf32f59af7f855828e9d74b5f862eddf5bfd9f25323/geopandas-1.0.1-py3-none-any.whl", hash = "sha256:01e147d9420cc374d26f51fc23716ac307f32b49406e4bd8462c07e82ed1d3d6", size = 323587, upload-time = "2024-07-02T12:26:50.876Z" },
+]
+
+[[package]]
+name = "geopy"
+version = "2.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "geographiclib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0e/fd/ef6d53875ceab72c1fad22dbed5ec1ad04eb378c2251a6a8024bad890c3b/geopy-2.4.1.tar.gz", hash = "sha256:50283d8e7ad07d89be5cb027338c6365a32044df3ae2556ad3f52f4840b3d0d1", size = 117625, upload-time = "2023-11-23T21:49:32.734Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e5/15/cf2a69ade4b194aa524ac75112d5caac37414b20a3a03e6865dfe0bd1539/geopy-2.4.1-py3-none-any.whl", hash = "sha256:ae8b4bc5c1131820f4d75fce9d4aaaca0c85189b3aa5d64c3dcaf5e3b7b882a7", size = 125437, upload-time = "2023-11-23T21:49:30.421Z" },
 ]
 
 [[package]]
@@ -572,6 +612,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "cartopy" },
+    { name = "contextily" },
     { name = "dask-ml" },
     { name = "datashader" },
     { name = "gdal" },
@@ -585,6 +626,7 @@ dependencies = [
     { name = "ipywidgets" },
     { name = "jupyter-bokeh" },
     { name = "matplotlib" },
+    { name = "neonutilities" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "requests" },
@@ -600,6 +642,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "cartopy", specifier = ">=0.24.1" },
+    { name = "contextily", specifier = ">=1.6.2" },
     { name = "dask-ml", specifier = ">=2025.1.0" },
     { name = "datashader", specifier = ">=0.18.0" },
     { name = "gdal", specifier = ">=3.10.3" },
@@ -613,6 +656,7 @@ requires-dist = [
     { name = "ipywidgets", specifier = ">=8.1.6" },
     { name = "jupyter-bokeh", specifier = ">=4.0.5" },
     { name = "matplotlib", specifier = ">=3.10.1" },
+    { name = "neonutilities", specifier = ">=1.0.1" },
     { name = "numpy", specifier = ">=2.2.5" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "requests", specifier = ">=2.32.3" },
@@ -664,6 +708,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/0c/47/57e897fb7094afb2d26e8b2e4af9a45c7cf1a405acdeeca001fdf2c98501/imageio-2.37.0.tar.gz", hash = "sha256:71b57b3669666272c818497aebba2b4c5f20d5b37c81720e5e1a56d59c492996", size = 389963, upload-time = "2025-01-20T02:42:37.089Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cb/bd/b394387b598ed84d8d0fa90611a90bee0adc2021820ad5729f7ced74a8e2/imageio-2.37.0-py3-none-any.whl", hash = "sha256:11efa15b87bc7871b61590326b2d635439acc321cf7f8ce996f812543ce10eed", size = 315796, upload-time = "2025-01-20T02:42:34.931Z" },
+]
+
+[[package]]
+name = "importlib-resources"
+version = "6.5.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/cf/8c/f834fbf984f691b4f7ff60f50b514cc3de5cc08abfc3295564dd89c5e2e7/importlib_resources-6.5.2.tar.gz", hash = "sha256:185f87adef5bcc288449d98fb4fba07cea78bc036455dd44c5fc4a2fe78fed2c", size = 44693, upload-time = "2025-01-03T18:51:56.698Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a4/ed/1f1afb2e9e7f38a545d628f864d562a5ae64fe6f7a10e28ffb9b185b4e89/importlib_resources-6.5.2-py3-none-any.whl", hash = "sha256:789cfdc3ed28c78b67a06acb8126751ced69a3d5f79c095a98298cd8a760ccec", size = 37461, upload-time = "2025-01-03T18:51:54.306Z" },
 ]
 
 [[package]]
@@ -1056,6 +1109,18 @@ wheels = [
 ]
 
 [[package]]
+name = "mercantile"
+version = "1.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d2/c6/87409bcb26fb68c393fa8cf58ba09363aa7298cfb438a0109b5cb14bc98b/mercantile-1.2.1.tar.gz", hash = "sha256:fa3c6db15daffd58454ac198b31887519a19caccee3f9d63d17ae7ff61b3b56b", size = 26352, upload-time = "2021-04-21T14:42:41.096Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b2/d6/de0cc74f8d36976aeca0dd2e9cbf711882ff8e177495115fd82459afdc4d/mercantile-1.2.1-py3-none-any.whl", hash = "sha256:30f457a73ee88261aab787b7069d85961a5703bb09dc57a170190bc042cd023f", size = 14779, upload-time = "2021-04-21T14:42:39.841Z" },
+]
+
+[[package]]
 name = "msgpack"
 version = "1.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1101,6 +1166,24 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/ee/6a/a98fa5e9d530a428a0cd79d27f059ed65efd3a07aad61a8c93e323c9c20b/narwhals-1.35.0.tar.gz", hash = "sha256:07477d18487fbc940243b69818a177ed7119b737910a8a254fb67688b48a7c96", size = 265784, upload-time = "2025-04-14T17:14:52.291Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/80/b3/5781eb874f04cb1e882a7d93cf30abcb00362a3205c5f3708a7434a1a2ac/narwhals-1.35.0-py3-none-any.whl", hash = "sha256:7562af132fa3f8aaaf34dc96d7ec95bdca29d1c795e8fcf14e01edf1d32122bc", size = 325708, upload-time = "2025-04-14T17:14:50.095Z" },
+]
+
+[[package]]
+name = "neonutilities"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "importlib-resources" },
+    { name = "pandas" },
+    { name = "parameterized" },
+    { name = "pyarrow" },
+    { name = "pyproj" },
+    { name = "requests" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a0/8a/b9d049b4460667be44146b91186970b80b6c80ac9ab65832e24417772a2d/neonutilities-1.0.1.tar.gz", hash = "sha256:8bce61c24cd38a9630698581b0d4c411654aff085ad09d90bfe801e022e79975", size = 94329, upload-time = "2024-12-04T18:24:43.883Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/60/5d/b7c289c83a514fa38e71425a8dde78eda9f0b5c5be163db934e1cfa19eea/neonutilities-1.0.1-py3-none-any.whl", hash = "sha256:40c0868cb9942234480f75d0bb4f322491698aa6346287e22a97e119bb2e7a44", size = 83312, upload-time = "2024-12-04T18:24:42.146Z" },
 ]
 
 [[package]]
@@ -1264,6 +1347,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/79/5b/244af19409227e81d1424b82e7f71c2b8b283b2911ec87c8a0d5a44357ac/param-2.2.0.tar.gz", hash = "sha256:2ef63ef7aef37412eeb8ee3a06189a51f69c58c068824ae070baecb5b2abd0b8", size = 176845, upload-time = "2024-12-16T22:40:14.151Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/99/56/370a6636e072a037b52499edd8928942df7f887974fc54444ece5152d26a/param-2.2.0-py3-none-any.whl", hash = "sha256:777f8c7b66ab820b70ea5ad09faaa6818308220caae89da3b5c5f359faa72a5e", size = 119008, upload-time = "2024-12-16T22:40:11.12Z" },
+]
+
+[[package]]
+name = "parameterized"
+version = "0.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ea/49/00c0c0cc24ff4266025a53e41336b79adaa5a4ebfad214f433d623f9865e/parameterized-0.9.0.tar.gz", hash = "sha256:7fc905272cefa4f364c1a3429cbbe9c0f98b793988efb5bf90aac80f08db09b1", size = 24351, upload-time = "2023-03-27T02:01:11.592Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/2f/804f58f0b856ab3bf21617cccf5b39206e6c4c94c2cd227bde125ea6105f/parameterized-0.9.0-py2.py3-none-any.whl", hash = "sha256:4e0758e3d41bea3bbd05ec14fc2c24736723f243b28d702081aef438c9372b1b", size = 20475, upload-time = "2023-03-27T02:01:09.31Z" },
 ]
 
 [[package]]
