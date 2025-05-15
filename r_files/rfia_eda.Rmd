@@ -9,11 +9,16 @@ knitr::opts_chunk$set(echo = TRUE)
 # Install only if needed
 # install.packages("rFIA")
 # install.packages(c("sf", "terra", "dplyr", "ggplot2"))
+install.packages("crayon")
 
 library(rFIA)
 library(sf)
 library(terra)
 library(dplyr)
+library(crayon)
+```
+
+```{r setup, include=FALSE}
 
 # Allow downloads that take up to 1 hour (defaults to 60 seconds)
 options(timeout=3600)
@@ -26,11 +31,60 @@ ca_fia <- getFIA(states = 'CA', dir = '../data/rfia/', load = TRUE)
 
 ```{r setup, include=FALSE}
 
+# Filter for Quercus kelloggii
+oak_plots <- ca_fia$TREE %>%
+  filter(SPNAME == 'QUERCUS KELLOGGII') %>%
+  select(PLT_CN) %>%
+  distinct()
+
+# Inspect available species codes (optional)
+unique_species <- unique(ca_fia$TREE$SPCD)
+
+# Check which code corresponds to Quercus kelloggii
+# You can print some examples
+head(unique_species)
+
+# Option 1: Use known SPCD code (e.g., 805 for Q. kelloggii)
+oak_spcd <- 805
+
+# Filter plots with that SPCD
+oak_plots <- ca_fia$TREE %>%
+  filter(SPCD == oak_spcd) %>%
+  select(PLT_CN) %>%
+  distinct()
+
+```
+
+
+```{r setup, include=FALSE}
 # Get plot coordinates
 plot_locations <- ca_fia$PLOT %>%
   filter(PLT_CN %in% oak_plots$PLT_CN) %>%
   select(PLT_CN, LAT, LON) %>%
   distinct() %>%
   st_as_sf(coords = c("LON", "LAT"), crs = 4326)
+
+```
+
+
+```{r setup, include=False}
+# Define 30 m resolution raster template
+r_template <- rast(
+  extent = ext(plot_locations) + 0.2,  # buffer around points
+  resolution = 30,
+  crs = "EPSG:32610"  # UTM zone 10N (approx. for Sierra / NorCal)
+)
+
+# Reproject plots to raster CRS
+plot_utm <- st_transform(plot_locations, crs = crs(r_template))
+
+# Convert to terra vector format
+v <- vect(plot_utm)
+
+# Rasterize to binary presence map
+species_raster <- rasterize(v, r_template, field = 1, background = 0)
+
+# Plot
+plot(species_raster, main = "Presence of Quercus kelloggii")
 
 ```
