@@ -24,6 +24,7 @@ dependencies = [
     "neonutilities>=1.0.1",
     "numpy>=2.2.5",
     "pandas>=2.2.3",
+    "pygbif>=0.6.5",
     "requests>=2.32.3",
     "rioxarray>=0.18.2",
     "scikit-image>=0.25.2",

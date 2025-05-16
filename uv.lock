@@ -12,6 +12,15 @@ wheels = [
 ]
 
 [[package]]
+name = "appdirs"
+version = "1.4.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/d8/05696357e0311f5b5c316d7b95f46c669dd9c15aaeecbb48c7d0aeb88c40/appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41", size = 13470, upload-time = "2020-05-11T07:59:51.037Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3b/00/2344469e2084fb287c2e0b57b72910309874c3245463acd6cf5e3db69324/appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128", size = 9566, upload-time = "2020-05-11T07:59:49.499Z" },
+]
+
+[[package]]
 name = "appnope"
 version = "0.1.4"
 source = { registry = "https://pypi.org/simple" }
@@ -118,6 +127,18 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/66/60/cc852a0835a053db18085dec1d1dd6f9cedc764d1524bfe30fd8be5ee3a7/Cartopy-0.24.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:f0963b80a048252815c56fbd21bc4e5d163618a9eaa36c8898ce2c60b6c03979", size = 10971183, upload-time = "2024-10-08T23:25:27.101Z" },
     { url = "https://files.pythonhosted.org/packages/a3/5b/476c8f3a277d7c78e5a5318bd32f234b994bfdc5d7731ae84218f2fa8a8f/Cartopy-0.24.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:dfdde0a6e0e56c5fc46f4e7d332237eb31bbd9908417f0f190fda5d322754184", size = 11709060, upload-time = "2024-10-08T23:25:29.621Z" },
     { url = "https://files.pythonhosted.org/packages/93/31/50bf07ba820c5aa5d4e674d72cdb5da90bbd012ba1b9c6c95c3f96afe233/Cartopy-0.24.1-cp313-cp313-win_amd64.whl", hash = "sha256:b17cf23dd74d0a922c2a5682dacef3c0bf89fa8c0bd0eae96b87fb684f966b15", size = 10959830, upload-time = "2024-10-08T23:25:32.75Z" },
+]
+
+[[package]]
+name = "cattrs"
+version = "24.1.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "attrs" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/29/7b/da4aa2f95afb2f28010453d03d6eedf018f9e085bd001f039e15731aba89/cattrs-24.1.3.tar.gz", hash = "sha256:981a6ef05875b5bb0c7fb68885546186d306f10f0f6718fe9b96c226e68821ff", size = 426684, upload-time = "2025-03-25T15:01:00.325Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3c/ee/d68a3de23867a9156bab7e0a22fb9a0305067ee639032a22982cf7f725e7/cattrs-24.1.3-py3-none-any.whl", hash = "sha256:adf957dddd26840f27ffbd060a6c4dd3b2192c5b7c2c0525ef1bd8131d8a83f5", size = 66462, upload-time = "2025-03-25T15:00:58.663Z" },
 ]
 
 [[package]]
@@ -542,6 +563,27 @@ wheels = [
 ]
 
 [[package]]
+name = "geojson-rewind"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/dd/8b/a2bbe301cd1d5c7a70bdcab3a717cdd6f4965dbe3caa83528f8ae97fab82/geojson_rewind-1.1.0.tar.gz", hash = "sha256:146600aa4bfa1d260bac1c498f11f118196cad2556d1754f0bc3df1d8fd902c6", size = 4146, upload-time = "2023-10-08T16:00:18.405Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/2a/a977adbc9c1b2970ed76a6959c0087322f963d2f4f5b2dd5007d9082c00f/geojson_rewind-1.1.0-py3-none-any.whl", hash = "sha256:eb89989210f533c7797553fcf61c0cacdfbd247790812a0e13ac56ec454ea135", size = 5186, upload-time = "2023-10-08T16:00:16.839Z" },
+]
+
+[[package]]
+name = "geomet"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2a/8c/dde022aa6747b114f6b14a7392871275dea8867e2bd26cddb80cc6d66620/geomet-1.1.0.tar.gz", hash = "sha256:51e92231a0ef6aaa63ac20c443377ba78a303fd2ecd179dc3567de79f3c11605", size = 28732, upload-time = "2023-11-14T15:43:36.764Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/af/90/3bc780df088d439714af8295196a4332a26559ae66fd99865e36f92efa9e/geomet-1.1.0-py3-none-any.whl", hash = "sha256:4372fe4e286a34acc6f2e9308284850bd8c4aa5bc12065e2abbd4995900db12f", size = 31522, upload-time = "2023-11-14T15:43:35.305Z" },
+]
+
+[[package]]
 name = "geopandas"
 version = "1.0.1"
 source = { registry = "https://pypi.org/simple" }
@@ -655,6 +697,7 @@ dependencies = [
     { name = "neonutilities" },
     { name = "numpy" },
     { name = "pandas" },
+    { name = "pygbif" },
     { name = "requests" },
     { name = "rioxarray" },
     { name = "scikit-image" },
@@ -686,6 +729,7 @@ requires-dist = [
     { name = "neonutilities", specifier = ">=1.0.1" },
     { name = "numpy", specifier = ">=2.2.5" },
     { name = "pandas", specifier = ">=2.2.3" },
+    { name = "pygbif", specifier = ">=0.6.5" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "rioxarray", specifier = ">=0.18.2" },
     { name = "scikit-image", specifier = ">=0.25.2" },
@@ -1564,6 +1608,23 @@ wheels = [
 ]
 
 [[package]]
+name = "pygbif"
+version = "0.6.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "appdirs" },
+    { name = "geojson-rewind" },
+    { name = "geomet" },
+    { name = "matplotlib" },
+    { name = "requests" },
+    { name = "requests-cache" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/aa/59/686852907fba6f6f589480b749bf355e05b51316427d07005e5cb38d8701/pygbif-0.6.5.tar.gz", hash = "sha256:4eaaf032d23eaee514061d5ac902c278c3bd54d061cd55d2a0209b072aaf3343", size = 60426, upload-time = "2024-11-29T14:36:04.683Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bd/9e/fdc9caffc44c13b83e61b494b057e83d1486a741618c548780cbe1b9f541/pygbif-0.6.5-py3-none-any.whl", hash = "sha256:f2c86da2fb9733d86463d83c14f3bb46bf01661021587524e4e5d7517c13a104", size = 70208, upload-time = "2024-11-29T14:36:01.768Z" },
+]
+
+[[package]]
 name = "pygments"
 version = "2.19.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1794,6 +1855,23 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz", hash = "sha256:55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760", size = 131218, upload-time = "2024-05-29T15:37:49.536Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl", hash = "sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6", size = 64928, upload-time = "2024-05-29T15:37:47.027Z" },
+]
+
+[[package]]
+name = "requests-cache"
+version = "1.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "attrs" },
+    { name = "cattrs" },
+    { name = "platformdirs" },
+    { name = "requests" },
+    { name = "url-normalize" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1a/be/7b2a95a9e7a7c3e774e43d067c51244e61dea8b120ae2deff7089a93fb2b/requests_cache-1.2.1.tar.gz", hash = "sha256:68abc986fdc5b8d0911318fbb5f7c80eebcd4d01bfacc6685ecf8876052511d1", size = 3018209, upload-time = "2024-06-18T17:18:03.774Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4e/2e/8f4051119f460cfc786aa91f212165bb6e643283b533db572d7b33952bd2/requests_cache-1.2.1-py3-none-any.whl", hash = "sha256:1285151cddf5331067baa82598afe2d47c7495a1334bfe7a7d329b43e9fd3603", size = 61425, upload-time = "2024-06-18T17:17:45Z" },
 ]
 
 [[package]]
@@ -2126,6 +2204,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/91/7a/146a99696aee0609e3712f2b44c6274566bc368dfe8375191278045186b8/uc-micro-py-1.0.3.tar.gz", hash = "sha256:d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a", size = 6043, upload-time = "2024-02-09T16:52:01.654Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/37/87/1f677586e8ac487e29672e4b17455758fce261de06a0d086167bb760361a/uc_micro_py-1.0.3-py3-none-any.whl", hash = "sha256:db1dffff340817673d7b466ec86114a9dc0e9d4d9b5ba229d9d60e5c12600cd5", size = 6229, upload-time = "2024-02-09T16:52:00.371Z" },
+]
+
+[[package]]
+name = "url-normalize"
+version = "2.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "idna" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/80/31/febb777441e5fcdaacb4522316bf2a527c44551430a4873b052d545e3279/url_normalize-2.2.1.tar.gz", hash = "sha256:74a540a3b6eba1d95bdc610c24f2c0141639f3ba903501e61a52a8730247ff37", size = 18846, upload-time = "2025-04-26T20:37:58.553Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bc/d9/5ec15501b675f7bc07c5d16aa70d8d778b12375686b6efd47656efdc67cd/url_normalize-2.2.1-py3-none-any.whl", hash = "sha256:3deb687587dc91f7b25c9ae5162ffc0f057ae85d22b1e15cf5698311247f567b", size = 14728, upload-time = "2025-04-26T20:37:57.217Z" },
 ]
 
 [[package]]
