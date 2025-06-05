@@ -31,6 +31,7 @@ dependencies = [
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
     "sklearn-xarray>=0.4.0",
+    "torch>=2.7.1",
     "xarray>=2025.3.1",
     "xgboost>=3.0.0",
 ]
