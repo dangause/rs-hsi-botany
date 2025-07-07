@@ -2,6 +2,40 @@ import pandas as pd
 
 
 
+# OFO Function
+
+def clean_ofo_survey_date(series: pd.Series) -> pd.Series:
+    """
+    Parse numeric survey_date values of the form:
+      • YYYYMMDD (e.g. 20200809) → 2020-08-09
+      • YYYYMM   (e.g. 202008)   → 2020-08-01
+      • YYYY      (e.g. 2016)    → 2016-01-01
+    Returns a datetime64 series, coercing any malformed entries to NaT.
+    """
+    def _parse(v):
+        if pd.isna(v):
+            return pd.NaT
+        s = str(int(v))
+        if len(s) == 4:
+            # year only
+            s = s + "0101"
+        elif len(s) == 6:
+            # year+month
+            s = s + "01"
+        elif len(s) == 8:
+            # year+month+day, leave as is
+            pass
+        else:
+            # unexpected length: pad/truncate to YYYYMMDD
+            s = s.zfill(8)[:8]
+        return pd.to_datetime(s, format="%Y%m%d", errors="coerce")
+    
+    return series.apply(_parse)
+
+
+
+
+
 # FERP Functions
 
 def load_ferp_species_table(file_path):
