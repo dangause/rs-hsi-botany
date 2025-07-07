@@ -59,6 +59,6 @@ def load_ferp_species_table(file_path):
             genus, epithet, author = name, "", ""
         return pd.Series([genus, epithet, author])
 
-    df[['Genus', 'Epithet', 'Author']] = df['Scientific name'].apply(parse_name)
+    df[['Genus', 'Specific epithet', 'Author']] = df['Scientific name'].apply(parse_name)
 
     return df
