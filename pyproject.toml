@@ -29,6 +29,7 @@ dependencies = [
   "numpy",
   "pandas",
   "pygbif",
+  "pyproj",
   "pystac-client",
   "requests",
   "rioxarray",
@@ -41,6 +42,7 @@ dependencies = [
   "webdriver-manager",
   "xarray",
   "xgboost",
+  "pyproj>=3.7.1",
 ]
 
 [build-system]
