@@ -77,10 +77,3 @@ def load_enmap_band_meta_txt(path: str) -> pd.DataFrame:
         preview = raw_bytes.decode("utf-8", errors="replace")
     except Exception:
         preview = str(raw_bytes[:200])
-
-    raise EmptyDataError(
-        "Could not parse the band meta file. "
-        "Check delimiter/encoding. First 1KB preview:\n---\n"
-        + preview
-        + "\n---"
-    )
