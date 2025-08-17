@@ -1,0 +1,15 @@
+numpy
+pandas
+rioxarray
+cartopy
+geoviews
+hvplot
+holoviews
+matplotlib
+matplotlib
+numpy
+geopandas
+xgboost
+sklearn_xarray
+sklearn
+dask_ml

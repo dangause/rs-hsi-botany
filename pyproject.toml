@@ -1,0 +1,65 @@
+[project]
+name             = "hrs-botany"
+version          = "0.1.0"
+description      = "Helper functions for hyperspectral remote sensing and botany workflows"
+readme           = "README.md"
+requires-python  = ">=3.12"
+license          = { text = "MIT" }
+
+dependencies = [
+  "pip",
+  "gdal==3.11.1",
+  "bs4",
+  "cartopy",
+  "contextily",
+  "dask-ml",
+  "datashader",
+  "geopandas",
+  "geoviews",
+  "h5py",
+  "holoviews",
+  "hvplot",
+  "ipykernel",
+  "ipython",
+  "ipywidgets",
+  "jupyter-bokeh",
+  "lightgbm",
+  "matplotlib",
+  "neonutilities",
+  "numpy",
+  "pandas",
+  "pygbif",
+  "pyproj",
+  "pystac-client",
+  "requests",
+  "rioxarray",
+  "scikit-image",
+  "scikit-learn",
+  "seaborn",
+  "selenium",
+  "sklearn-xarray",
+  "torch",
+  "webdriver-manager",
+  "xarray",
+  "xgboost",
+  "pyproj>=3.7.1",
+  "imbalanced-learn>=0.13.0",
+  "openpyxl>=3.1.5",
+]
+
+[build-system]
+requires    = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.build]
+dev-mode-dirs = ["src"]
+
+
+[tool.hatch.build.targets.wheel]
+# include everything under src/hrs_botany
+include = ["src/hrs_botany/**/*"]
+
+[tool.hatch.build.targets.wheel.sources]
+# flatten src/ into the root of the wheel
+"src" = ""
